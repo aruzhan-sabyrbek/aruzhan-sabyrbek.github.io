@@ -1,2 +1,1 @@
-# aruzhan-sabyrbek.github.io
-Aruzhan Sabyrbek - Personal Website
+# Aruzhan Sabyrbek - Personal Website
