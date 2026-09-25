@@ -11,6 +11,12 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #d5d9de;
+            background-image: url('images/page-bg.jpg');
+            background-size: cover;
+            background-position: center top;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
         }
         /* Style for the active navigation link */
         summary::-webkit-details-marker {
@@ -22,12 +28,25 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800">
+<body class="text-slate-800">
 
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="md:flex">
-            <!-- Left Sidebar: Fixed navigation -->
-            <aside class="md:w-1/3 md:sticky top-0 md:h-screen md:overflow-y-auto p-8">
+    <header class="sticky top-0 z-20 border-b border-white/50 bg-white/80 backdrop-blur-md">
+        <nav class="px-4 sm:px-6 lg:px-8" aria-label="Page">
+            <ul class="flex flex-wrap items-center gap-x-5 gap-y-2 py-3">
+                <li><a href="#about" class="nav-link text-sm sm:text-base font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">About</a></li>
+                <li><a href="#education" class="nav-link text-sm sm:text-base font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Education</a></li>
+                <li><a href="#experience" class="nav-link text-sm sm:text-base font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Experience</a></li>
+                <li><a href="#service" class="nav-link text-sm sm:text-base font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Service</a></li>
+                <li><a href="#publications" class="nav-link text-sm sm:text-base font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Publications</a></li>
+                <li><a href="#awards" class="nav-link text-sm sm:text-base font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Awards</a></li>
+                <li><a href="#skills" class="nav-link text-sm sm:text-base font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Skills</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="md:flex md:items-start">
+            <!-- Left Sidebar: Profile and contact -->
+            <aside class="md:w-72 lg:w-80 md:shrink-0 md:sticky md:top-16 md:h-[calc(100vh-4rem)] md:overflow-y-auto px-4 pt-8 pb-8 sm:px-5 lg:pl-6 lg:pr-4">
                 <div class="flex flex-col items-center md:items-start text-center md:text-left h-full">
                     <!-- Profile Picture and Name -->
                     <div class="flex flex-col items-center md:items-start">
@@ -41,19 +60,6 @@
                         <p class="text-lg text-blue-600">PhD Student & Graduate Research Assistant</p>
                         <p class="text-sm text-slate-500">PROTON Lab, Arizona State University</p>
                     </div>
-
-                    <!-- Navigation Links -->
-                    <nav class="my-8 md:my-16">
-                        <ul class="space-y-4">
-                            <li><a href="#about" class="nav-link text-lg font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">About</a></li>
-                            <li><a href="#education" class="nav-link text-lg font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Education</a></li>
-                            <li><a href="#experience" class="nav-link text-lg font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Experience</a></li>
-                            <li><a href="#service" class="nav-link text-lg font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Service</a></li>
-                            <li><a href="#publications" class="nav-link text-lg font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Publications</a></li>
-                            <li><a href="#awards" class="nav-link text-lg font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Awards</a></li>
-                            <li><a href="#skills" class="nav-link text-lg font-medium text-slate-600 hover:text-blue-500 transition-all duration-300">Skills</a></li>
-                        </ul>
-                    </nav>
 
                     <!-- Contact Information -->
                     <div class="mt-auto w-full">
@@ -101,7 +107,7 @@
             </aside>
 
             <!-- Right Content: Scrollable resume sections -->
-            <main class="md:w-2/3 p-4 md:p-12">
+            <main class="w-full max-w-4xl p-4 md:py-12 md:pl-6 md:pr-10">
                 <!-- About Section -->
                 <section id="about" class="mb-16 scroll-mt-24">
                     <div class="bg-white p-8 rounded-2xl shadow-md space-y-6">
@@ -562,7 +568,6 @@
                     </div>
                 </section>
             </main>
-        </div>
     </div>
 
     <!-- JavaScript for scroll-spy effect -->
